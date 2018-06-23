@@ -2,6 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <distributionManagement>
+    <repository>
+      <id>bintray-g4s8-maven</id>
+      <name>mvn</name>
+      <url>https://api.bintray.com/maven/g4s8/mvn/com.g4s8.cactoos-cache/;publish=1</url>
+    </repository>
+  </distributionManagement>
   <groupId>com.g4s8</groupId>
   <artifactId>cactoos-cache</artifactId>
   <version>1.0-SNAPSHOT</version>
