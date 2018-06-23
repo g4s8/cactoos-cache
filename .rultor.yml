@@ -3,7 +3,7 @@ docker:
 assets:
   settings.xml: g4s8/.rultor#assets/g4s8-mvn/settings.xml
 env:
-  MAVEN_OPTS: -Xmx128m
+  MAVEN_OPTS: -Xmx256m
   JAVA_OPTS: -Xmx128m
 install: |
   sudo gem install --no-rdoc --no-ri pdd

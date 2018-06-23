@@ -26,5 +26,8 @@
  * Tests package.
  *
  * @since 0.1
+ * @todo #1:30min Add tests for `SoftFunc`, `SoftScalar` and `SoftTest`,
+ *  which should verify that it uses soft reference with `ReferenceQueue`
+ *  argument.
  */
 package org.cactoos.cache;

@@ -40,6 +40,8 @@
  * Most documented base classes here are: {@link org.cactoos.cache.SoftBiFunc}
  * and {@link org.cactoos.cache.WeakFunc}, all other classes are based on
  * these two classes decorating them.
+ * @todo #1:30min Add `SoftBytes` class which should implement `Bytes`
+ *  interface and uses `SoftReference` to cache byte[] value.
  *
  * @since 0.1
  */
