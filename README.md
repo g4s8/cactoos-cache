@@ -15,8 +15,8 @@ Caching primitives for [Cactoos](https://github.com/yegor256/cactoos) library.
 Add maven dependency:
 ```xml
 <dependency>
-  <groupId>com.google.code.findbugs</groupId>
-  <artifactId>annotations</artifactId>
+  <groupId>com.g4s8</groupId>
+  <artifactId>cactoos-cache</artifactId>
 </dependency>
 ```
 latest version on bintray is [![Bintray](https://api.bintray.com/packages/g4s8/mvn/com.g4s8.cactoos-cache/images/download.svg)](https://bintray.com/g4s8/mvn/com.g4s8.cactoos-cache/_latestVersion).
