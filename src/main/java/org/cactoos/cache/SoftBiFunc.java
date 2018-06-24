@@ -26,8 +26,11 @@ package org.cactoos.cache;
 
 import java.lang.ref.ReferenceQueue;
 import java.lang.ref.SoftReference;
+import java.util.Collection;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import javax.annotation.concurrent.NotThreadSafe;
 import org.cactoos.BiFunc;
 import org.cactoos.map.MapEntry;
 
@@ -48,6 +51,7 @@ import org.cactoos.map.MapEntry;
  * @param <Z> Result type
  * @since 0.1
  */
+@NotThreadSafe
 public final class SoftBiFunc<X, Y, Z> implements BiFunc<X, Y, Z> {
 
     /**
@@ -102,6 +106,16 @@ public final class SoftBiFunc<X, Y, Z> implements BiFunc<X, Y, Z> {
         if (val == null) {
             val = this.origin.apply(first, second);
             this.map.put(key, new SoftReference<>(val, this.references));
+        }
+        final Collection<Map.Entry<X, Y>> empty = new LinkedList<>();
+        for (final Map.Entry<Map.Entry<X, Y>, SoftReference<Z>> entry
+            : this.map.entrySet()) {
+            if (entry.getValue().get() == null) {
+                empty.add(entry.getKey());
+            }
+        }
+        for (final Map.Entry<X, Y> item : empty) {
+            this.map.remove(item);
         }
         return val;
     }

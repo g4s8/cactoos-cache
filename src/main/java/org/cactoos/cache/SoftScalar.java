@@ -25,6 +25,7 @@
 package org.cactoos.cache;
 
 import java.lang.ref.ReferenceQueue;
+import javax.annotation.concurrent.NotThreadSafe;
 import org.cactoos.BiFunc;
 import org.cactoos.Scalar;
 
@@ -34,6 +35,7 @@ import org.cactoos.Scalar;
  * @param <T> Result type
  * @since 0.1
  */
+@NotThreadSafe
 public final class SoftScalar<T> implements Scalar<T> {
 
     /**

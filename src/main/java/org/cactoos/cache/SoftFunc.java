@@ -25,6 +25,7 @@
 package org.cactoos.cache;
 
 import java.lang.ref.ReferenceQueue;
+import javax.annotation.concurrent.NotThreadSafe;
 import org.cactoos.BiFunc;
 import org.cactoos.Func;
 
@@ -35,6 +36,7 @@ import org.cactoos.Func;
  * @param <Y> Result type
  * @since 0.1
  */
+@NotThreadSafe
 public final class SoftFunc<X, Y> implements Func<X, Y> {
 
     /**

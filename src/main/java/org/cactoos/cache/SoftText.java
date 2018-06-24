@@ -27,6 +27,7 @@ package org.cactoos.cache;
 import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.io.IOException;
 import java.lang.ref.ReferenceQueue;
+import javax.annotation.concurrent.NotThreadSafe;
 import org.cactoos.BiFunc;
 import org.cactoos.Text;
 import org.cactoos.func.IoCheckedBiFunc;
@@ -36,6 +37,7 @@ import org.cactoos.func.IoCheckedBiFunc;
  *
  * @since 0.1
  */
+@NotThreadSafe
 public final class SoftText implements Text {
 
     /**

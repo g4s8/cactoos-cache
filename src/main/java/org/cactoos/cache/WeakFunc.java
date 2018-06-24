@@ -26,6 +26,7 @@ package org.cactoos.cache;
 
 import java.util.Map;
 import java.util.WeakHashMap;
+import javax.annotation.concurrent.NotThreadSafe;
 import org.cactoos.Func;
 
 /**
@@ -38,6 +39,7 @@ import org.cactoos.Func;
  * @param <Y> Result type
  * @since 0.1
  */
+@NotThreadSafe
 public final class WeakFunc<X, Y> implements Func<X, Y> {
 
     /**
