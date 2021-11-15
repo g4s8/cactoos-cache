@@ -1,3 +1,9 @@
+# WARNING
+
+It was an experiment repository, it contains POC library code. It's not producation ready. It'll be not supported.
+
+---
+
 # cactoos-cache
 Caching primitives for [Cactoos](https://github.com/yegor256/cactoos) library.
 
